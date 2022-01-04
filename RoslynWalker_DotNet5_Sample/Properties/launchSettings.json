@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RoslynWalker_DotNet5_Sample": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\Work\\eMbold\\Projects\\corona_pg\\csharpCore"
+    }
+  }
+}
