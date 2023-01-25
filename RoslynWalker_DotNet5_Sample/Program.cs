@@ -47,6 +47,17 @@ namespace RoslynWalker_DotNet5_Sample
 
 				Console.WriteLine($"{loadProgress.Operation,-15} {loadProgress.ElapsedTime,-15:m\\:ss\\.fffffff} {projectDisplay}");
 			}
+			
+			public void Report(ProjectLoadProgress loadProgress)
+			{
+				var projectDisplay = Path.GetFileName(loadProgress.FilePath);
+				if (loadProgress.TargetFramework != null)
+				{
+					projectDisplay += $" ({loadProgress.TargetFramework})";
+				}
+
+				Console.WriteLine($"{loadProgress.Operation,-15} {loadProgress.ElapsedTime,-15:m\\:ss\\.fffffff} {projectDisplay}");
+			}
 		}
 
 		static async Task Main(string[] args)
